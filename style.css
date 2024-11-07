@@ -1,0 +1,51 @@
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .perguntas{
+    
+    align-items: center;
+    justify-content: center;
+    margin-left: 480px;
+    margin-top: 100px;
+  }
+  .img{
+    margin-top: -200px;
+    margin-left: 40px;
+  }
+
+  .pergunta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .seta {
+    transition: transform 0.3s ease;
+  }
+  
+  .seta.rotacionar {
+    transform: rotate(180deg);
+  }
+  .pergunta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    position: relative; /* Necessário para o pseudo-elemento */
+    padding-left: 20px; /* Ajuste o espaçamento à esquerda */
+}
+
+.pergunta::before {
+    content: ""; /* Nenhum texto, apenas a barra */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 2px; /* Largura da barra */
+    height: 20px; /* Altura da barra */
+    background-color: blue; /* Cor da barra */
+    transform: translateY(-50%); /* Alinha a barra verticalmente no meio */
+}
